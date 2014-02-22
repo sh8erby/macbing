@@ -12,4 +12,10 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
+-(IBAction)onepoint:(id)sender;
+-(IBAction)fivepoints:(id)sender;
+-(IBAction)fifteenpoints:(id)sender;
+-(IBAction)thirtypoints:(id)sender;
+
+
 @end

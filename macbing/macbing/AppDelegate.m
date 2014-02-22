@@ -18,18 +18,52 @@
 //random number generator
 //timer
 //loop
+//create void function that applies for the button
+//insert key strokes to close the tab
+
+
+
+//1 pt = 3 searches
+//5 pt = 15 searches
+//15 pt = 45 searches
+//30 pt = 90 searches
 
 - (IBAction)onepoint:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://www.bing.com"]];
+    int a = 3;
+    int random_a = 1000;
+    char letter_a = 'a';
+    loop(a, random_a, letter_a);
+    
 }
 
 - (IBAction)fivepoints:(id)sender {
+    int b = 1;//15
+    int random_b = 2000;
+    char letter_b = 'b';
+    loop(b,random_b, letter_b);
 }
 
 - (IBAction)fifteenpoints:(id)sender {
+    int c = 4;//45
+    int random_c = 10000;
+    char letter_c = 'c';
+    loop(c, random_c, letter_c);
 }
 
 - (IBAction)thirtypoints:(id)sender {
+    int d = 9;//90
+    int random_d = 80000;
+    char letter_d = 'd';
+    loop(d, random_d, letter_d);
 }
+
+void loop(int counter, int random, char letter)
+{
+    
+    for (int i = 0 ; i< counter; i++)
+    //[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://www.bing.com"]];
+    
+}
+
 
 @end
