@@ -13,6 +13,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    
 }
 
 //random number generator
@@ -37,10 +38,12 @@
 }
 
 - (IBAction)fivepoints:(id)sender {
-    int b = 1;//15
-    int random_b = 2000;
-    char letter_b = 'b';
-    loop(b,random_b, letter_b);
+    //int b = 1;//15
+    //int random_b = 2000;
+    //char letter_b = 'b';
+    //loop(b,random_b, letter_b);
+    keys();
+
 }
 
 - (IBAction)fifteenpoints:(id)sender {
@@ -60,10 +63,56 @@
 void loop(int counter, int random, char letter)
 {
     
-    for (int i = 0 ; i< counter; i++)
-    //[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://www.bing.com"]];
+    //for (int i = 0 ; i< counter; i++)
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://www.bing.com"]];
+    keys();
+    printf("hello world");
+    
+}
+
+void keys ()
+{
+    CGEventSourceRef src = CGEventSourceCreate(kCGEventSourceStateHIDSystemState);
+    
+    CGEventRef cmdd = CGEventCreateKeyboardEvent(src, 0x38, true);
+    CGEventRef cmdu = CGEventCreateKeyboardEvent(src, 0x38, false);
+    CGEventRef wd   = CGEventCreateKeyboardEvent(src, 0xD, true);
+    CGEventRef wu   = CGEventCreateKeyboardEvent(src, 0xD, false);
+    CGEventRef td   = CGEventCreateKeyboardEvent(src, 0x11, true);
+    CGEventRef tu   = CGEventCreateKeyboardEvent(src, 0x11, false);
+    CGEventRef spcd = CGEventCreateKeyboardEvent(src, 0x31, true);
+    CGEventRef spcu = CGEventCreateKeyboardEvent(src, 0x31, false);
+    
+    CGEventSetFlags(spcd, kCGEventFlagMaskCommand);
+    CGEventSetFlags(spcu, kCGEventFlagMaskCommand);
+    CGEventSetFlags(wd, kCGEventFlagMaskCommand);
+    CGEventSetFlags(wu, kCGEventFlagMaskCommand);
+    CGEventSetFlags(td, kCGEventFlagMaskCommand);
+    CGEventSetFlags(tu, kCGEventFlagMaskCommand);
+    
+    CGEventTapLocation loc = kCGHIDEventTap;
+    CGEventPost(loc, cmdd);
+    CGEventPost(loc, wd);
+    CGEventPost(loc, wu);
+    CGEventPost(loc, cmdu);
+    
+    CFRelease(cmdd);
+    CFRelease(cmdu);
+    CFRelease(wd);
+    CFRelease(wu);
+    CFRelease(src);
     
 }
 
 
 @end
+
+
+
+
+
+
+
+
+
+

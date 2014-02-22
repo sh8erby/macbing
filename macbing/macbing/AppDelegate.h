@@ -17,5 +17,4 @@
 -(IBAction)fifteenpoints:(id)sender;
 -(IBAction)thirtypoints:(id)sender;
 
-
 @end
