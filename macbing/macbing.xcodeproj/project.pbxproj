@@ -18,6 +18,7 @@
 		25B12DEC18B8326F005C732B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B12DCB18B8326F005C732B /* Cocoa.framework */; };
 		25B12DF418B8326F005C732B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25B12DF218B8326F005C732B /* InfoPlist.strings */; };
 		25B12DF618B8326F005C732B /* macbingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B12DF518B8326F005C732B /* macbingTests.m */; };
+		25B12E0718B8388D005C732B /* Bing.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B12E0618B8388D005C732B /* Bing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		25B12DF118B8326F005C732B /* macbingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "macbingTests-Info.plist"; sourceTree = "<group>"; };
 		25B12DF318B8326F005C732B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		25B12DF518B8326F005C732B /* macbingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = macbingTests.m; sourceTree = "<group>"; };
+		25B12E0518B8388D005C732B /* Bing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bing.h; sourceTree = "<group>"; };
+		25B12E0618B8388D005C732B /* Bing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				25B12DDD18B8326F005C732B /* AppDelegate.h */,
 				25B12DDE18B8326F005C732B /* AppDelegate.m */,
 				25B12DE018B8326F005C732B /* MainMenu.xib */,
+				25B12E0518B8388D005C732B /* Bing.h */,
+				25B12E0618B8388D005C732B /* Bing.m */,
 				25B12DE318B8326F005C732B /* Images.xcassets */,
 				25B12DD218B8326F005C732B /* Supporting Files */,
 			);
@@ -253,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25B12DDF18B8326F005C732B /* AppDelegate.m in Sources */,
+				25B12E0718B8388D005C732B /* Bing.m in Sources */,
 				25B12DD818B8326F005C732B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

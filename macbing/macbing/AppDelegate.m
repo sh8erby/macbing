@@ -15,4 +15,21 @@
     // Insert code here to initialize your application
 }
 
+//random number generator
+//timer
+//loop
+
+- (IBAction)onepoint:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://www.bing.com"]];
+}
+
+- (IBAction)fivepoints:(id)sender {
+}
+
+- (IBAction)fifteenpoints:(id)sender {
+}
+
+- (IBAction)thirtypoints:(id)sender {
+}
+
 @end
