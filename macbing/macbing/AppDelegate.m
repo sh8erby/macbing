@@ -34,27 +34,24 @@
     int random_a = 1000;
     char letter_a = 'a';
     loop(a, random_a, letter_a);
-    
 }
 
 - (IBAction)fivepoints:(id)sender {
-    //int b = 1;//15
-    //int random_b = 2000;
-    //char letter_b = 'b';
-    //loop(b,random_b, letter_b);
-    keys();
-
+    int b = 15;//15
+    int random_b = 2000;
+    char letter_b = 'b';
+    loop(b,random_b, letter_b);
 }
 
 - (IBAction)fifteenpoints:(id)sender {
-    int c = 4;//45
+    int c = 45;//45
     int random_c = 10000;
     char letter_c = 'c';
     loop(c, random_c, letter_c);
 }
 
 - (IBAction)thirtypoints:(id)sender {
-    int d = 9;//90
+    int d = 90;//90
     int random_d = 80000;
     char letter_d = 'd';
     loop(d, random_d, letter_d);
@@ -62,11 +59,18 @@
 
 void loop(int counter, int random, char letter)
 {
-    
-    //for (int i = 0 ; i< counter; i++)
-    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"https://www.bing.com"]];
-    keys();
-    printf("hello world");
+    for (int i = 0 ; i< counter; i++)
+    {
+        int mod = arc4random()%2;
+        int modi = arc4random()%random;
+        NSString *a = @"https://www.bing.com";
+        NSString *b = [NSString stringWithFormat:@"%@/search?q=%c%i",a,letter,modi];
+        
+        [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:b]];
+        [NSThread sleepForTimeInterval:1 + mod];
+        keys();
+    }
+    //printf("hello world");
     
 }
 
